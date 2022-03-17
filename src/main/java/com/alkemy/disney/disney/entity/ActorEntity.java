@@ -9,10 +9,10 @@ import java.util.Set;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "character")
+@Table(name = "actor")
 @Getter
 @Setter
-public class CharacterEntity {
+public class ActorEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
@@ -27,15 +27,9 @@ public class CharacterEntity {
 
     private String history;
 
-    @ManyToMany(mappedBy = "characters")
-    private Set<MovieEntity> movies = new HashSet<>();
+    @ManyToMany(mappedBy = "actors")
+    private Set<MovieEntity> movie = new HashSet<>();
 
-    /*public void addPelicula(MovieEntity pelicula) {
-        this.peliculas.add(pelicula);
-    }
 
-    public void removePelicula(MovieEntity pelicula) {
-        this.peliculas.remove(pelicula);
-    }*/
 
 }
