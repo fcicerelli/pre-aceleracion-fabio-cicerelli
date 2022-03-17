@@ -42,7 +42,7 @@ public class MovieEntity {
             CascadeType.PERSIST,
             CascadeType.MERGE
     })
-    @JoinTable(name = "movie_actor", joinColumns = @JoinColumn(name = "movie_id"), inverseJoinColumns = @JoinColumn(name = "actor_id"))
-    private Set<ActorEntity> actors = new HashSet<>();
+    @JoinTable(name = "movie_character", joinColumns = @JoinColumn(name = "movie_id"), inverseJoinColumns = @JoinColumn(name = "character_id"))
+    private Set<CharacterEntity> characters = new HashSet<>();
 
 }
